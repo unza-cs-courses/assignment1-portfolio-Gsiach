@@ -1,0 +1,501 @@
+:root {
+    --primary-color: #2c3e50;       /* Dark Navy for headings */
+  --secondary-color: #95a5a6;     /* Soft Grey for subtext */
+  --accent-color: #3498db;        /* Bright Blue for buttons/links */
+  --text-color: #333333;          /* Near-black for readability */
+  --background-color: #f4f7f6;    /* Off-white page background */
+  --card-background: #fafafa;     /* Pure white for cards */
+  --header-background: #d2b48c;   /* tan/brown */
+  --nav-background: #add8e6;      /* light blue */
+
+}
+
+[view-theme="dark"] {
+  --primary-color: #ecf0f1;       /* Light grey for headings */
+  --secondary-color: #bdc3c7;     /* Softer grey for subtext */
+  --accent-color: #9b59b6;        /* Purple accent for buttons/links */
+  --text-color: #f5f5f5;          /* Near-white for readability */
+  --background-color: #1e1e1e;    /* Dark background */
+  --card-background: #2c2c2c;     /* Slightly lighter for cards */
+  --header-background: #3a2f2f;   /* darker brown */
+  --nav-background: #1e3a5f;      /* darker blue */
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+/*Desingning the body and heading by applying colour, font, padding and margin*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6; 
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;              
+  padding: 40px; 
+          
+}
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem; 
+}
+
+h1 { font-size: 2.5rem; }
+h2 {
+     font-size: 2rem;
+     text-align: center;
+}
+h3 { font-size: 1.75rem; }
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Applying background colour, flex-box and centering elements in the various sections*/
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background-color); /* Light, clean background */
+    color: var(--text-color);
+    animation: fadeInUp 1s ease-out forwards;
+    margin-top: 70px;   
+    margin-bottom: 70px;
+
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cta-button {
+      text-decoration: none;        
+      background-color: var(--accent-color);    
+      color: white;                 
+      padding: 8px 12px;            
+      border-radius: 50px;           
+      display: inline-block;        
+      transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00ced1; 
+    transform: scale(1.1); /* Making the button pop out slightly */
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#about {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+  line-height: 1.6;
+  background-color: var(--card-background); 
+  color: var(--text-color);                 
+  border-radius: 4px;
+  border-top: 4px solid var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
+  padding: 20px;
+}
+
+#skills {
+  background-color: var(--background-color);
+  padding: 40px 20px;
+  text-align: center;
+  margin:0 auto;
+  max-width: 900px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;                    
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;                         
+  max-width: 600px;
+}
+
+#contact {
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+input[required] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+/*applying margin,padding,colour and centering to the navigation list*/
+nav {
+    margin-top: 0;
+    padding-top:0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+nav ul {
+  list-style: none;              
+  background-color: var(--nav-background);    
+  border-radius: 4px;           
+  padding: 5px 20px;            
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;     
+}
+
+nav ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/*Applying background colour, padding, margi and border properties to the project cards*/
+#projects a {
+  text-decoration: none;        
+  background-color: var(--accent-color);    
+  color: white;                 
+  padding: 8px 12px;            
+  border-radius: 50px;           
+  display: inline-block;        
+  transition: background-color 0.3s ease; 
+}
+
+#projects a:hover {
+  background-color: #00ced1;
+  transform: scale(1.1);    
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 900px;     
+    margin: 20px auto;    
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+}
+
+.project-card a {
+    align-self: center; 
+    margin-top: auto;   
+}
+
+input:focus{
+    outline: 2px solid var(--accent-color);
+}
+
+ul li:first-child {
+    font-weight: bold;
+}
+
+/*Designing the form*/
+
+form {
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: var(--card-background);
+  max-width: 900px;   /* sets a maximum width */
+  margin: 0 auto;
+
+}
+
+form label {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+form .btn {
+  margin-top: 10px;
+}
+
+/*Centering the header text and applying background colour*/
+
+header {
+  text-align: center;          
+  background-color: var(--header-background);   
+  color: white;                
+  padding: 20px 10px;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+
+header h1 {
+  margin: 0;                   
+  font-size: 2.5em;
+  color:rgb(237, 255, 254);           
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Designing the footer*/
+footer {
+  background-color: #333;       
+  color: white;                 
+  text-align: center;          
+  padding: 20px 0; 
+  border-radius: 4px;
+  max-width: 900px;   /* sets a maximum width */
+  margin: 20px auto;  /* centers the footer */  
+}
+
+footer ul {
+  list-style: none;             
+  padding: 10px;
+  margin: 10px 0 0 0;          
+}
+
+footer ul li {
+  display: inline-block;        
+  margin: 0 10px;               
+}
+
+footer ul li a {
+  display: inline-block;
+  text-decoration: none;       
+  background-color: var(--accent-color);    
+  color: white;                 
+  padding: 6px 12px;            
+  border-radius: 4px;           
+  transition: background-color 0.3s ease;
+  
+}
+
+footer ul li a:hover {
+  background-color: #00ced1;    
+  transform: scale(1.1);
+}
+
+/*
+Specificity hierarchy (from lowest to highest):
+
+footer (0, 0, 1)
+footer ul (0, 0, 2)
+footer ul li (0, 0, 3)
+footer ul li a (0, 0, 4)
+footer ul li a:hover (0, 1, 4)
+
+The color that will apply to the link in the footer is determined by the most specific rule that matches it.
+
+Normal state:
+The link (<a>) is affected by all rules, but the most specific is, light blue wins.
+
+Hover state:
+the 'footer ul li a:hover'has higher specificity because of the pseudo‑class, blue wins when hovered.
+*/
+
+#about img {
+  width: 250px;
+  float: right;      
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 50%; 
+}
+/* Lab 3 css*/
+/*Applying flex-box and grid containers*/
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.skills-grid li {
+  display: inline-block;        
+  background-color: var(--accent-color);  
+  color: white;                 
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-color);         
+  font-weight: bold;
+  width: auto;       
+  min-width: 120px;
+
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.contact-container {
+    display: flex;  /* or display: grid */
+    gap: 40px;
+}
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Making the page media/device responsive*/
+@media (max-width: 768px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .site-header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*This ensures that if someone prints my portfolio, it doesn't look messy*/
+@media print {
+    /* Hide the navigation and the CTA button */
+    .nav-list, .cta-button, .btn, footer ul li a, .project-card a{
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    /* links aren't blue */
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    form {
+      border: 1px solid gray;
+    }
+    form select,
+    form textarea,
+    input{
+      border: 1px solid gray;
+    }
+}
+
+/*styling the dark/light them button*/
+#theme-toggle {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #00ced1;
+}

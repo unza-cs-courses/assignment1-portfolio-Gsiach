@@ -127,23 +127,23 @@ Before submitting, verify:
 
 ## Your Information
 
-**Name:** [Your Name]
-**Student ID:** [Your Student ID]
-**Design Theme:** [Describe your portfolio theme/style]
+**Name:** Guba Siachalinga
+**Student ID:** 2022021185
+**Design Theme:** A clean, modern portfolio with a unique and approchable design. It features readable typography with bold accent colors, responsive layouts, and smooth transitions. It emphasizes clarity, structure, and user-friendly navigation. And particularly uses visually distinct sections that adapt seamlessly to light and dark modes.
 
 ### CSS Techniques Used
 - [ ] CSS Custom Properties
 - [ ] Flexbox
 - [ ] CSS Grid
 - [ ] Media Queries
-- [ ] Other: _______________
+- [ ] Other: Transitions and Transformations
 
 ### Challenges & Solutions
-[Describe any challenges you faced and how you solved them]
+1. Had a challenge with centering elements which i solved by using: margin: 0 auto; for block-level elements e.g. <section> and i also used align-items:center; and justify-content:center;
 
 ### Credits
 [List any images, fonts, or resources used with attribution]
-
+1. gubasprofile: Personal portrait (Photo by Guba Siachalinga, 2026).
 ---
 
 ## Academic Integrity
